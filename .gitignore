@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/AuthDemo/AuthDemo.Website/Properties/ServiceDependencies/ImxAuthDemo - Web Deploy
+/AuthDemo/AuthDemo.Website/Properties/serviceDependencies.ImxAuthDemo - Web Deploy.json
+/AuthDemo/AuthDemo.Website/.config/dotnet-tools.json
