@@ -2,9 +2,9 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -65,8 +65,20 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  font-family: "Lato", sans-serif;
+  font-family: "Calibri", sans-serif;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:first-line,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    font-size: initial;
+    line-height: inherit;
+    font-family: "Calibri", sans-serif !important;
+}
+
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -102,3 +114,4 @@ div.login-logout-tab div.login-form-icon {
     text-align: center;
     padding: 12px 12px 12px 12px;
 }
+
