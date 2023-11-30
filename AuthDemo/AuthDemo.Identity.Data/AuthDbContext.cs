@@ -1,8 +1,7 @@
-﻿using AuthDemo.Website.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuthDemo.Data
+namespace AuthDemo.Identity.Data
 {
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {

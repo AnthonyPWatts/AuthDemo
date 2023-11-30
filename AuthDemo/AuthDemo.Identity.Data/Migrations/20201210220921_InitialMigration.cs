@@ -1,7 +1,7 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
-namespace AuthDemo.Website.Migrations
+namespace AuthDemo.Identity.Data.Migrations
 {
     public partial class InitialMigration : Migration
     {

@@ -1,12 +1,11 @@
 ﻿using AuthDemo.Identity.Data;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(AuthDemo.Website.Areas.Identity.IdentityHostingStartup))]
-namespace AuthDemo.Website.Areas.Identity
+[assembly: HostingStartup(typeof(AuthDemo.BlazorWebsite.Areas.Identity.IdentityHostingStartup))]
+namespace AuthDemo.BlazorWebsite.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {
@@ -15,9 +14,10 @@ namespace AuthDemo.Website.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<AuthDbContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("AuthDbContextConnection")));
+                        context.Configuration.GetConnectionString("DefaultConnection")));
 
-                services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+                services.AddDefaultIdentity<ApplicationUser>(options =>
+                        options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
         }
